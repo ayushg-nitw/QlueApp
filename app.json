@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "qlueless",
+    "slug": "qlueless",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ayush.qlueless",
+      "softwareKeyboardLayoutMode": "pan",
+      "googleServicesFile": "./google-services.json",
+      "enableProguardInReleaseBuilds": true,
+      "extraGradleProperties": {
+        "android.useAndroidX": "true",
+        "android.enableJetifier": "true"
+      }
+      
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsPictureInPicture": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "11ef79e7-390d-431e-8b49-379b36aef00f"
+      },
+      "APPWRITE_ENDPOINT": "https://cloud.appwrite.io/v1",
+      "APPWRITE_PLATFORM": "com.ayush.aora",
+      "APPWRITE_PROJECT_ID": "679efe7200206043c24e",
+      "APPWRITE_DATABASE_ID": "679f05aa0037740468f8",
+      "APPWRITE_STORAGE_ID": "679f0878002e723c3b3a",
+      "APPWRITE_USERS_COLLECTION_ID": "679f0647002b3c57c0db",
+      "APPWRITE_VIDEOS_COLLECTION_ID": "679f0655003471053575"
+    },
+    "splash": {
+      "backgroundColor": "#000000"
+    },
+    "owner": "ayushgnitw"
+  }
+}
