@@ -9,7 +9,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to let you upload profile pictures.",
+        "NSPhotoLibraryUsageDescription": "The app accesses your photos to let you share them with your friends."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -19,12 +23,11 @@
       "package": "com.ayush.qlueless",
       "softwareKeyboardLayoutMode": "pan",
       "googleServicesFile": "./google-services.json",
-      "enableProguardInReleaseBuilds": true,
-      "extraGradleProperties": {
-        "android.useAndroidX": "true",
-        "android.enableJetifier": "true"
-      }
-      
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -50,7 +53,14 @@
         {
           "supportsPictureInPicture": true
         }
-      ]
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
