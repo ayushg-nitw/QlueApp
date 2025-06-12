@@ -26,7 +26,8 @@
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "WRITE_EXTERNAL_STORAGE",
+        "NOTIFICATIONS"
       ]
     },
     "web": {
@@ -36,9 +37,6 @@
     },
     "plugins": [
       "expo-router",
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth",
-      "@react-native-firebase/crashlytics",
       [
         "expo-splash-screen",
         {
@@ -49,22 +47,21 @@
         }
       ],
       [
-        "expo-video",
-        {
-          "supportsPictureInPicture": true
-        }
-      ],
-      [
         "expo-image-picker",
         {
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
       ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#FBB809",
+          "defaultChannel": "default"
+        }
+      ],
       "expo-font"
     ],
-    "experiments": {
-      "typedRoutes": true
-    },
     "extra": {
       "router": {
         "origin": false
@@ -83,6 +80,13 @@
     "splash": {
       "backgroundColor": "#000000"
     },
-    "owner": "ayushgnitw"
+    "owner": "ayushgnitw",
+    "notification": {
+      "icon": "./assets/images/qlue.png",
+      "color": "#FBB809",
+      "iosDisplayInForeground": true,
+      "androidMode": "default",
+      "androidCollapsedTitle": "#{unread_notifications} new interactions"
+    }
   }
 }
