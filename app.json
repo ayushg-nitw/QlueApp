@@ -37,6 +37,9 @@
     },
     "plugins": [
       "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
       [
         "expo-splash-screen",
         {
@@ -44,6 +47,12 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsPictureInPicture": true
         }
       ],
       [
@@ -62,6 +71,9 @@
       ],
       "expo-font"
     ],
+    "experiments": {
+      "typedRoutes": true
+    },
     "extra": {
       "router": {
         "origin": false
